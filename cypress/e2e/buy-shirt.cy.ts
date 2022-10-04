@@ -1,11 +1,11 @@
 import {
-  MenuContentPage, 
-  ProductsListPage, 
-  ShoppingCartPage, 
-  LoginPage, 
+  MenuContentPage,
+  ProductsListPage,
+  ShoppingCartPage,
+  LoginPage,
   AddressStepPage,
-  ShippingStepPage, 
-  PaymentStepPage
+  ShippingStepPage,
+  PaymentStepPage,
 } from "../page/index";
 
 const menuContentPage = new MenuContentPage();
@@ -30,6 +30,6 @@ describe("Buy a t-shirt", () => {
     shippingStepPage.proceedToCheckout();
     paymentStepPage.payByBankWire();
     paymentStepPage.confirmOrder();
-    paymentStepPage.checkOrderCompleteMessage();
+    paymentStepPage.verifyConfirmationMessage();
   });
 });
