@@ -16,17 +16,12 @@ class LoginPage {
         this.signButtonTitle = "Sign in";
     }
 
-    public enterEmailAdress(): void {
+    public signIn(): void {
         cy.get(this.emailTextbox).type(this.emailAddress);
-    }
-
-    public enterPassword(): void {
         cy.get(this.passwordTextbox).type(this.userPassword);
-    }
-
-    public clickSignInButton(): void {
         cy.get(this.signButton).contains(this.signButtonTitle).click();
     }
+
 }
 
 export { LoginPage }

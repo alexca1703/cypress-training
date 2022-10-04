@@ -15,15 +15,15 @@ class PaymentStepPage {
         this.completeOrderMessage = "Your order on My Store is complete.";
     }
 
-    public clickPayByWire(): void {
+    public payByBankWire(): void {
         cy.get(this.paymentOption).click();
     }
 
-    public clickConfirmOrderButton(): void {
+    public confirmOrder(): void {
         cy.get(this.confirmOrderButton).contains(this.confirmOrderText).click();
     }
 
-    public checkOrderCompleteMessage(): void {
+    public verifyConfirmationMessage(): void {
         cy.get(this.orderCompleteLabel).should(this.condition1,this.completeOrderMessage);
     }
 }
